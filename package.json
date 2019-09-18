@@ -1,7 +1,10 @@
 {
   "name": "datahub-import-json",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
+  "bin": {
+    "datahub-import-json": "bin/cli.js"
+  },
   "dependencies": {
     "cac": "^6.5.3",
     "node-fetch": "^2.6.0",
