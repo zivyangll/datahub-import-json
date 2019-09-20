@@ -27,7 +27,7 @@ cli
     console.log(options);
     console.log('=================================');
 
-    datahubImportJson({
+    await datahubImportJson({
       projectName,
       ...options,
     });
