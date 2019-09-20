@@ -10,7 +10,7 @@
 ## Installment
 
 ```bash
-$ npm i datahub-import-json -gq
+$ npm i datahub-import-json -g
 ```
 
 ## Usage
