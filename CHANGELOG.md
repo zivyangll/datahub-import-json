@@ -1,3 +1,13 @@
+<a name="0.0.4"></a>
+## [0.0.4](https://github.com/zivyangll/datahub-import-json/compare/v0.0.3...v0.0.4) (2019-09-20)
+
+
+### Features
+
+* handle js file ([04ff2c8](https://github.com/zivyangll/datahub-import-json/commit/04ff2c8))
+
+
+
 <a name="0.0.3"></a>
 ## 0.0.3 (2019-09-20)
 
