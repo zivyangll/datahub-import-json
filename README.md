@@ -31,8 +31,8 @@ $  datahub-import-json projectName
 | -s | DataHub server address | http://127.0.0.1:5678 |
 | -d | mock data directory path | - |
 | --mockSuffix | set mock file suffix | .json |
-| --interfaceSuffix | DataHub interface suffix | .json |
-| --mockRemoveSuffix | replace mockRemoveSuffix to interfaceSuffix | - |
+| --interfaceSuffix | DataHub interface suffix, will replace mockSuffix  | .json |
+| --mockRemoveSuffix | remove mockRemoveSuffix, no repalce | - |
 | --method | DataHub interface method | ALL |
 
 ## Examples
@@ -61,10 +61,10 @@ DataHub server 地址为：http://127.0.0.1:5678/
 
 ```bash
 # post 请求
-$ datahub-import-json test-project -d /Users/xxx/mock/post/ --interfaceSuffix .html --mockRemoveSuffix /data.json --method POST -s http://127.0.0.1:5678
+$ datahub-import-json test-project -d /Users/xxx/mock/post/ --mockRemoveSuffix /data.json --method POST -s http://127.0.0.1:5678
 
 # get 请求
-$ datahub-import-json test-project -d /Users/xxx/mock/get/ --interfaceSuffix .html --mockRemoveSuffix /data.json --method GET -s http://127.0.0.1:5678
+$ datahub-import-json test-project -d /Users/xxx/mock/get/ --mockRemoveSuffix /data.json --method GET -s http://127.0.0.1:5678
 ```
 
 ---
