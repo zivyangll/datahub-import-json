@@ -16,7 +16,8 @@ $ npm i datahub-import-json -g
 ## Usage
 
 ```bash
-$ datahub-import-json test-project -d /Users/xxx/mock -s http://127.0.0.1:5678
+$ datahub-import-json test-project -d /Users/xxx/mock/get --method GET
+$ datahub-import-json test-project -d /Users/xxx/mock/post --method POST
 ```
 
 ## Configuration
@@ -31,6 +32,40 @@ $  datahub-import-json projectName
 | -d | mock data directory path | - |
 | --mockSuffix | set mock file suffix | .json |
 | --interfaceSuffix | DataHub interface suffix | .json |
+| --mockRemoveSuffix | replace mockRemoveSuffix to interfaceSuffix | - |
+| --method | DataHub interface method | ALL |
+
+## Examples
+
+### Import JSON interface
+
+假设项目名为：test-project（建议与仓库名称保持一致）
+mock 数据文件件路径为：/Users/xxx/mock
+DataHub server 地址为：http://127.0.0.1:5678/
+想导入的 Mock 文件后缀为：.json
+导入后的 Mock 接口后缀为：.html
+
+```bash
+$ datahub-import-json test-project -d /Users/xxx/mock --interfaceSuffix .html -s http://127.0.0.1:5678
+```
+
+### Import js interface
+
+假设项目名为：test-project（建议与仓库名称保持一致）
+mock 数据文件件路径为：/Users/xxx/mock
+DataHub server 地址为：http://127.0.0.1:5678/
+想导入的 Mock 文件路径为：
+/Users/xxx/mock/post/member/xxx.html/data.json
+/Users/xxx/mock/post/member/xxx.html/data.js
+导入后的 Mock 接口路径为：/member/xxx.html
+
+```bash
+# post 请求
+$ datahub-import-json test-project -d /Users/xxx/mock/post/ --interfaceSuffix .html --mockRemoveSuffix /data.json --method POST -s http://127.0.0.1:5678
+
+# get 请求
+$ datahub-import-json test-project -d /Users/xxx/mock/get/ --interfaceSuffix .html --mockRemoveSuffix /data.json --method GET -s http://127.0.0.1:5678
+```
 
 ---
 

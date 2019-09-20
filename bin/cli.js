@@ -16,11 +16,18 @@ cli
   .option('-s, --server <server>', 'DataHub server address', {
     default: 'http://127.0.0.1:5678',
   })
-  .option('--mockSuffix <mockSuffix>', 'set mock file suffix', {
+  .option('--mockSuffix <mockSuffix>', 'filter mock file with mockSuffix', {
     default: '.json',
   })
   .option('--interfaceSuffix <interfaceSuffix>', 'DataHub interface suffix', {
     default: '.json',
+  })
+  .option(
+    '--mockRemoveSuffix <mockRemoveSuffix>',
+    'replace mockRemoveSuffix to interfaceSuffix'
+  )
+  .option('--method <method>', 'DataHub interface method', {
+    default: 'ALL',
   })
   .action(async (projectName, options) => {
     console.log('==============options============');
