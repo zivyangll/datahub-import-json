@@ -23,6 +23,13 @@ cli
     default: '.json',
   })
   .option(
+    '--replacePathWithDynamic <replacePathWithDynamic>',
+    'replace path with dynamic',
+    {
+      default: '/_/',
+    }
+  )
+  .option(
     '--mockRemoveSuffix <mockRemoveSuffix>',
     'replace mockRemoveSuffix to interfaceSuffix'
   )

@@ -1,6 +1,6 @@
 {
   "name": "datahub-import-json",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "",
   "bin": {
     "datahub-import-json": "bin/cli.js"

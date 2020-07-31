@@ -32,6 +32,7 @@ $  datahub-import-json projectName
 | -d | mock data directory path | - |
 | --mockSuffix | set mock file suffix | .json |
 | --interfaceSuffix | DataHub interface suffix, will replace mockSuffix  | .json |
+| --replacePathWithDynamic | replace path with dynamic, goods/:id.json | /_/ |
 | --mockRemoveSuffix | remove mockRemoveSuffix, no repalce | - |
 | --method | DataHub interface method | ALL |
 
